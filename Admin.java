@@ -1,24 +1,14 @@
-public class Admin extends Account{
+// filepath: d:\OOP-II Coding Challenges\Admin.java
+public class Admin extends Account {
+    private String authPassword;
 
-// A private string specified only with the Admin
+    public Admin(int id, String name, String password) {
+        super(id, name);
+        this.authPassword = password;
+    }
 
-private String AuthPassword;
-
-public Admin(int _id, String _name, String _password){
-
-id = _id;
-
-name = _name;
-
-AuthPassword = _password;
-
-}
-
-}
-
-
-public interface DataSource {
-
-public void execute();
-
+    @Override
+    public void processAccount() {
+        System.out.println("Processing Admin account: " + getName());
+    }
 }
